@@ -95,45 +95,45 @@
 </div>
 
 <script type="text/javascript">
-    var hostUrl = "http://localhost:2815";
-    var apiUrl = '/services/test/';
+    //var hostUrl = "http://localhost:2815";
+    //var apiUrl = '/services/test/';
 
-    $(document).ready(function () {
-        GetAllStores();
-    });
+    //$(document).ready(function () {
+    //    GetAllStores();
+    //});
 
-    function GetAllStores() {
-        $.ajax({
-            url: hostUrl + apiUrl,
-            type: 'GET',
-            dataType: 'jsonp',
-            username: "my_user",
-            password: "my_password",
-            xhrFields: {
-                withCredentials: true
-            },
-            crossDomain: true,
-            success: function (data) {
-                debugger;
-                DisplayStoreList(data);
-            },
-            error: function (x, y, z) {
-                debugger;
-                alert("error");
-            }
-        });
-    }
-    function DisplayStoreList(stores) {
-        debugger;
-        $("#stores").empty();
-        var result = "<table><th>ID</th><th>Name</th><th>Address</th>";
-        $.each(stores, function (index, store) {
-            result += "<tr><td>" + store.Id + "</td><td> " + store.Name + "</td><td>"
-                + store.Address + "</td></tr>";
-        });
-        result += "</table>";
-        $("#stores").html(result);
-    }
+    //function GetAllStores() {
+    //    $.ajax({
+    //        url: hostUrl + apiUrl,
+    //        type: 'GET',
+    //        dataType: 'jsonp',
+    //        username: "my_user",
+    //        password: "my_password",
+    //        xhrFields: {
+    //            withCredentials: true
+    //        },
+    //        crossDomain: true,
+    //        success: function (data) {
+    //            debugger;
+    //            DisplayStoreList(data);
+    //        },
+    //        error: function (x, y, z) {
+    //            debugger;
+    //            alert("error");
+    //        }
+    //    });
+    //}
+    //function DisplayStoreList(stores) {
+    //    debugger;
+    //    $("#stores").empty();
+    //    var result = "<table><th>ID</th><th>Name</th><th>Address</th>";
+    //    $.each(stores, function (index, store) {
+    //        result += "<tr><td>" + store.Id + "</td><td> " + store.Name + "</td><td>"
+    //            + store.Address + "</td></tr>";
+    //    });
+    //    result += "</table>";
+    //    $("#stores").html(result);
+    //}
 
 
     //function FindProduct() {
