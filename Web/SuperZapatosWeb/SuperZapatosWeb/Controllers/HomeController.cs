@@ -18,7 +18,6 @@ namespace SuperZapatosWeb.Controllers
         public ActionResult Index()
         {
             StoreResponse responseStore = SuperZapatosAPI.GetStoreAPI("services/stores/");
-            StoreResponse responseStoreXML = SuperZapatosAPI.GetStoreAPIXml("services/stores/");
             ArticleResponse responseArticle = SuperZapatosAPI.GetArticleAPI("services/articles/");
 
             ViewBag.Stores = responseStore.stores;
